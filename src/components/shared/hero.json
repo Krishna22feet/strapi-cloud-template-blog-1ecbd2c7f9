@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_shared_heroes",
+  "info": {
+    "displayName": "hero",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "primaryCtaText": {
+      "type": "string"
+    },
+    "primaryCtaLink": {
+      "type": "string"
+    },
+    "secondaryCtaText": {
+      "type": "string"
+    },
+    "secondaryCtaLink": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
