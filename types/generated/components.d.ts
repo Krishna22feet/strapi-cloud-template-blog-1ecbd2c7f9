@@ -36,6 +36,20 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHowItWorksSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_how_it_works_sections';
+  info: {
+    displayName: 'How It Works Section';
+  };
+  attributes: {
+    eyebrow: Schema.Attribute.String;
+    highlight: Schema.Attribute.String;
+    steps: Schema.Attribute.Component<'shared.steps', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedItems extends Struct.ComponentSchema {
   collectionName: 'components_shared_items';
   info: {
@@ -135,6 +149,18 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSteps extends Struct.ComponentSchema {
+  collectionName: 'components_shared_steps';
+  info: {
+    displayName: 'steps';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    step: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedTrustedBy extends Struct.ComponentSchema {
   collectionName: 'components_shared_trusted_bies';
   info: {
@@ -152,6 +178,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.features-section': SharedFeaturesSection;
       'shared.hero': SharedHero;
+      'shared.how-it-works-section': SharedHowItWorksSection;
       'shared.items': SharedItems;
       'shared.logos': SharedLogos;
       'shared.media': SharedMedia;
@@ -160,6 +187,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.steps': SharedSteps;
       'shared.trusted-by': SharedTrustedBy;
     }
   }

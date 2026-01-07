@@ -611,6 +611,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     features: Schema.Attribute.Component<'shared.features-section', false>;
     hero: Schema.Attribute.Component<'shared.hero', false>;
+    howitworks: Schema.Attribute.Component<
+      'shared.how-it-works-section',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

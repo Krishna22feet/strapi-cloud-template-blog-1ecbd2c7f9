@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_how_it_works_sections",
+  "info": {
+    "displayName": "How It Works Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "component",
+      "component": "shared.steps",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
