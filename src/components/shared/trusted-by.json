@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_trusted_bies",
+  "info": {
+    "displayName": "Trusted By"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "logos": {
+      "type": "component",
+      "component": "shared.logos",
+      "repeatable": true
+    },
+    "metrics": {
+      "type": "component",
+      "component": "shared.metrics",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

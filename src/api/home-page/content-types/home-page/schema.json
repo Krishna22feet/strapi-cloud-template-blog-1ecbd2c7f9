@@ -15,6 +15,11 @@
       "type": "component",
       "component": "shared.hero",
       "repeatable": false
+    },
+    "TrustedBy": {
+      "type": "component",
+      "component": "shared.trusted-by",
+      "repeatable": true
     }
   }
 }

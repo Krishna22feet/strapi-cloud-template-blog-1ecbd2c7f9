@@ -22,6 +22,20 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLogos extends Struct.ComponentSchema {
+  collectionName: 'components_shared_logos';
+  info: {
+    displayName: 'logos';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    name: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -30,6 +44,17 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+  };
+}
+
+export interface SharedMetrics extends Struct.ComponentSchema {
+  collectionName: 'components_shared_metrics';
+  info: {
+    displayName: 'metrics';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
   };
 }
 
@@ -84,15 +109,30 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTrustedBy extends Struct.ComponentSchema {
+  collectionName: 'components_shared_trusted_bies';
+  info: {
+    displayName: 'Trusted By';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    logos: Schema.Attribute.Component<'shared.logos', true>;
+    metrics: Schema.Attribute.Component<'shared.metrics', true>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.hero': SharedHero;
+      'shared.logos': SharedLogos;
       'shared.media': SharedMedia;
+      'shared.metrics': SharedMetrics;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.trusted-by': SharedTrustedBy;
     }
   }
 }
