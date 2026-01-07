@@ -14,6 +14,24 @@ export interface SharedFeaturesSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFinalCta extends Struct.ComponentSchema {
+  collectionName: 'components_shared_final_ctas';
+  info: {
+    displayName: 'Final CTA';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    highlight: Schema.Attribute.String;
+    metaItems: Schema.Attribute.Component<'shared.meta-items', true>;
+    primaryCtaLink: Schema.Attribute.String;
+    primaryCtaText: Schema.Attribute.String;
+    secondaryCtaLink: Schema.Attribute.String;
+    secondaryCtaText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_heroes';
   info: {
@@ -84,6 +102,16 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+  };
+}
+
+export interface SharedMetaItems extends Struct.ComponentSchema {
+  collectionName: 'components_shared_meta_items';
+  info: {
+    displayName: 'metaItems';
+  };
+  attributes: {
+    Text: Schema.Attribute.String;
   };
 }
 
@@ -177,11 +205,13 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.features-section': SharedFeaturesSection;
+      'shared.final-cta': SharedFinalCta;
       'shared.hero': SharedHero;
       'shared.how-it-works-section': SharedHowItWorksSection;
       'shared.items': SharedItems;
       'shared.logos': SharedLogos;
       'shared.media': SharedMedia;
+      'shared.meta-items': SharedMetaItems;
       'shared.metrics': SharedMetrics;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

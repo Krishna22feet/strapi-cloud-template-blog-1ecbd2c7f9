@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_meta_items",
+  "info": {
+    "displayName": "metaItems"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

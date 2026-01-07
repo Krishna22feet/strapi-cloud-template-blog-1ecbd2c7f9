@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_shared_final_ctas",
+  "info": {
+    "displayName": "Final CTA"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "primaryCtaText": {
+      "type": "string"
+    },
+    "primaryCtaLink": {
+      "type": "string"
+    },
+    "secondaryCtaText": {
+      "type": "string"
+    },
+    "secondaryCtaLink": {
+      "type": "string"
+    },
+    "metaItems": {
+      "type": "component",
+      "component": "shared.meta-items",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

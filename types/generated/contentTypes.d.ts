@@ -610,6 +610,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     features: Schema.Attribute.Component<'shared.features-section', false>;
+    finalcta: Schema.Attribute.Component<'shared.final-cta', false>;
     hero: Schema.Attribute.Component<'shared.hero', false>;
     howitworks: Schema.Attribute.Component<
       'shared.how-it-works-section',
