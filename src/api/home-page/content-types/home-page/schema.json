@@ -16,7 +16,7 @@
       "component": "shared.hero",
       "repeatable": false
     },
-    "TrustedBy": {
+    "trustedBy": {
       "type": "component",
       "component": "shared.trusted-by",
       "repeatable": true
