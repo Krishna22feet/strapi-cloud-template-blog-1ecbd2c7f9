@@ -1,5 +1,19 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedFeaturesSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_features_sections';
+  info: {
+    displayName: 'Features Section';
+  };
+  attributes: {
+    eyebrow: Schema.Attribute.String;
+    highlight: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'shared.items', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_heroes';
   info: {
@@ -18,6 +32,18 @@ export interface SharedHero extends Struct.ComponentSchema {
     primaryCtaText: Schema.Attribute.String;
     secondaryCtaLink: Schema.Attribute.String;
     secondaryCtaText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedItems extends Struct.ComponentSchema {
+  collectionName: 'components_shared_items';
+  info: {
+    displayName: 'items';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
@@ -124,7 +150,9 @@ export interface SharedTrustedBy extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.features-section': SharedFeaturesSection;
       'shared.hero': SharedHero;
+      'shared.items': SharedItems;
       'shared.logos': SharedLogos;
       'shared.media': SharedMedia;
       'shared.metrics': SharedMetrics;

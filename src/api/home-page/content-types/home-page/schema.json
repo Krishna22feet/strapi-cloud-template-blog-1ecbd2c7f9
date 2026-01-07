@@ -20,6 +20,11 @@
       "type": "component",
       "component": "shared.trusted-by",
       "repeatable": true
+    },
+    "features": {
+      "type": "component",
+      "component": "shared.features-section",
+      "repeatable": false
     }
   }
 }

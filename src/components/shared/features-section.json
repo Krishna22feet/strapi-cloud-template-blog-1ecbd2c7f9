@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_features_sections",
+  "info": {
+    "displayName": "Features Section"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.items",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
